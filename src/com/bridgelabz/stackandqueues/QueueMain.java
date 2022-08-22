@@ -7,5 +7,7 @@ public class QueueMain {
         queue.enqueue(30);
         queue.enqueue(70);
         queue.print_frontRear();
+        queue.dequeue();
+        queue.print_frontRear();
     }
 }

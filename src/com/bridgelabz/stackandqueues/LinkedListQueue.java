@@ -5,7 +5,7 @@ public class LinkedListQueue
     private Node front, rear;
     private int queueSize;
 
-    //linked list node
+
     private class Node {
         int data;
         Node next;
@@ -24,9 +24,22 @@ public class LinkedListQueue
     {
         return (queueSize == 0);
     }
+    public int dequeue()
+    {
+        int data = front.data;
+        front = front.next;
+        if (isEmpty())
+        {
+            rear = null;
+        }
+        queueSize--;
+        System.out.println("Element " + data+ " removed from the queue");
+        return data;
+    }
 
 
-   
+
+
 
     public void enqueue(int data)
     {
