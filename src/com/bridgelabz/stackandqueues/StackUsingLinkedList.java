@@ -57,5 +57,30 @@ class StackUsingLinkedList {
 
                 temp = temp.link;
             }
+
         }}
+     public int peek()
+    {
+
+        if (!isEmpty()) {
+            return top.data;
+        }
+        else {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+
+
+    public void pop()
+    {
+
+        if (top == null) {
+            System.out.print("\nStack Underflow");
+            return;
+        }
+
+
+        top = (top).link;
+    }
 }
